@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Home from './pages/Home';
 import JogoPage from './pages/JogoPage';
+import { Analytics } from '@vercel/analytics/react';
 
 function lerRota() {
   const hash = window.location.hash.slice(1) || '/';       // remove "#"
@@ -18,7 +19,7 @@ export default function App() {
     return () => window.removeEventListener('hashchange', aoMudar);
   }, []);
 
-  // Sincroniza com a API de tela cheia, que o jogo.js usava via DOM
+  // Sincroniza com a API de tela cheia
   useEffect(() => {
     const eventos = ['pointerdown', 'pointerup', 'keydown'];
     const tentar = () => {
@@ -34,19 +35,29 @@ export default function App() {
     return () => eventos.forEach(e => document.removeEventListener(e, tentar, true));
   }, []);
 
-  if (rota.caminho === '/' || rota.caminho === '') {
-    return <Home />;
-  }
+  // Função que renderiza o conteúdo baseado na rota
+  function renderizarConteudo() {
+    if (rota.caminho === '/' || rota.caminho === '') {
+      return <Home />;
+    }
 
-  const match = rota.caminho.match(/^\/jogo\/([a-z]+)$/);
-  if (match) {
-    return <JogoPage id={match[1]} params={rota.params} />;
+    const match = rota.caminho.match(/^\/jogo\/([a-z]+)$/);
+    if (match) {
+      return <JogoPage id={match[1]} params={rota.params} />;
+    }
+
+    return (
+      <main style={{ padding: 40, textAlign: 'center', color: '#fff' }}>
+        <h1 className="titulo-comic ciano">Ops! Página não encontrada.</h1>
+        <p><a href="#/" style={{ color: 'var(--comic-cyan)' }}>Voltar ao início</a></p>
+      </main>
+    );
   }
 
   return (
-    <main style={{ padding: 40, textAlign: 'center', color: '#fff' }}>
-      <h1 className="titulo-comic ciano">Ops! Página não encontrada.</h1>
-      <p><a href="#/" style={{ color: 'var(--comic-cyan)' }}>Voltar ao início</a></p>
-    </main>
+    <>
+      {renderizarConteudo()}
+      <Analytics />
+    </>
   );
 }
