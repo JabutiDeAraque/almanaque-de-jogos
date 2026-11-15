@@ -1,0 +1,23 @@
+[hidden] { display: none !important; }
+main.hist-main { max-width: 2000px; margin: 0 auto; padding: 24px 16px 40px; display: grid; gap: 24px; }
+.selo-pill.grande { font-size: 1rem; padding: 6px 16px; }
+.hist-main .caixa-dica { font-size: clamp(1.1rem, 2.2vw, 1.45rem); font-weight: 600; min-height: 64px; }
+.rotulo { font-family: var(--font-comic-title); font-style: italic; font-size: 1.5rem; color: var(--comic-blue-dark); margin: 22px 0 12px; }
+.grade { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 18px; }
+.vaga { position: relative; min-height: 150px; display: grid; place-items: center; border: 3px dashed var(--comic-blue); border-radius: 16px; background: #f3f8ff; }
+.vaga .num { font-family: var(--font-comic-title); font-size: 3.6rem; color: #b6cbe3; }
+.vaga.proxima { border-color: var(--comic-orange); background: #fff7e6; }
+.vaga.proxima .num { color: var(--comic-orange); }
+.vaga.cheia { border: none; background: none; place-items: stretch; }
+.cena { position: relative; font: inherit; color: var(--text-primary); cursor: pointer; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; min-height: 150px; padding: 14px; background: #fff; border: var(--border-comic); border-radius: 16px; box-shadow: var(--shadow-comic); transition: transform .08s, box-shadow .08s; }
+.cena:active { transform: translate(3px, 3px); box-shadow: var(--shadow-comic-sm); }
+.cena .icone-cena { font-size: 2.3rem; line-height: 1; }
+.cena .texto { font-weight: 600; font-size: clamp(1rem, 1.5vw, 1.2rem); line-height: 1.3; }
+.cena .badge { position: absolute; top: -12px; left: -12px; width: 38px; height: 38px; display: grid; place-items: center; font-family: var(--font-comic-title); font-size: 1.5rem; background: var(--comic-yellow); border: var(--border-comic); border-radius: 50%; box-shadow: var(--shadow-comic-sm); }
+.cena.fixa    { background: #d9f5df; border-color: var(--comic-green-dark); }
+.cena.errada  { background: #ffe1e1; animation: tremer .35s; }
+.cena.perdida { background: #fff7cc; }
+.cena.pop     { animation: pulo .3s; }
+.barra-acoes { display: flex; justify-content: center; margin-top: 26px; padding-bottom: 6px; }
+.titulo-leitura { font-family: var(--font-comic-title); font-style: italic; font-weight: 400; font-size: clamp(2rem, 5vw, 3rem); color: var(--comic-blue); margin: 6px 0 14px; }
+.texto-historia { font-size: clamp(1.25rem, 2.4vw, 1.75rem); line-height: 1.6; font-weight: 600; margin: 0 0 28px; }

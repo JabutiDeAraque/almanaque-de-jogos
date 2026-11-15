@@ -1,0 +1,78 @@
+.chip.vermelho { background: #ffe1e1; color: var(--comic-red-dark); }
+.arena { display: flex; flex-direction: column; min-height: calc(100vh - 76px); }
+.pista { --cw: clamp(64px, 10vh, 112px); --ini: 14px; --fim: 7%; position: relative; height: clamp(200px, 32vh, 330px); overflow: hidden; border-bottom: 4px solid var(--contorno); background-color: #7cc83c; background-image: repeating-linear-gradient(90deg, rgba(255,255,255,.08) 0 70px, transparent 70px 140px); background-size: cover; background-position: center; }
+.asfalto { position: absolute; left: 0; right: 0; top: 16%; bottom: 16%; background: #ecd9a6; border-top: 4px solid var(--contorno); border-bottom: 4px solid var(--contorno); }
+.asfalto::after { content: ''; position: absolute; left: 0; right: 0; top: 50%; border-top: 4px dashed rgba(255, 255, 255, .95); }
+.pista.com-foto { background-image: none; }
+.pista.com-foto .asfalto { background: none; border: none; }
+.pista.com-foto .asfalto::after { display: none; }
+.raia { position: absolute; left: 0; right: 0; height: 34%; }
+.raia.vermelho { top: 16%; } .raia.azul { top: 50%; }
+.marca { position: absolute; top: 16%; bottom: 16%; border-left: 3px dashed rgba(16, 28, 44, .3); left: calc((100% - var(--cw) - var(--fim)) * var(--prog) + var(--ini) + var(--cw)); }
+.linha-final { position: absolute; top: 16%; bottom: 16%; right: 5%; width: 24px; border: 3px solid var(--contorno); background: repeating-conic-gradient(var(--contorno) 0 25%, #fff 0 50%) 0 0 / 14px 14px; }
+.placa-final { position: absolute; top: 2%; right: calc(5% - 24px); transform: rotate(-3deg); background: #fff; border: var(--border-comic); border-radius: 10px; padding: 0 12px; box-shadow: var(--shadow-comic-sm); }
+.placa-final .titulo-comic { font-size: clamp(1.1rem, 2.6vh, 1.7rem); }
+.cerebro { position: absolute; top: 50%; width: var(--cw); height: var(--cw); margin-top: calc(var(--cw) / -2); left: calc((100% - var(--cw) - var(--fim)) * var(--prog) + var(--ini)); transition: left .75s cubic-bezier(.3, 1.35, .5, 1); z-index: 3; }
+.cerebro .corpo { position: relative; width: 100%; height: 100%; display: grid; place-items: center; font-size: calc(var(--cw) * .78); line-height: 1; filter: drop-shadow(3px 3px 0 rgba(16, 28, 44, .35)); }
+.cerebro img { width: 100%; height: 100%; object-fit: contain; }
+.cerebro .bandana { position: absolute; top: 20%; left: 12%; width: 76%; height: 12%; border: 3px solid var(--contorno); border-radius: 6px; transform: rotate(-8deg); }
+.cerebro.azul .bandana { background: var(--comic-blue); }
+.cerebro.vermelho .bandana { background: var(--comic-red); }
+.cerebro.pulou .corpo { animation: salto .5s; }
+@keyframes salto { 40% { transform: translateY(-22%) rotate(-6deg); } }
+.zona { position: relative; flex: 1; display: grid; grid-template-columns: 1fr 1fr; min-height: 380px; }
+.lado { display: flex; flex-direction: column; justify-content: flex-end; gap: 12px; padding: 24px 4% 28px; position: relative; background-image: radial-gradient(rgba(255, 255, 255, .13) 2px, transparent 2.6px); background-size: 16px 16px; }
+.lado.azul { background-color: var(--comic-blue); border-right: 2px solid var(--contorno); }
+.lado.vermelho { background-color: var(--comic-red); border-left: 2px solid var(--contorno); }
+.nome-jogador { position: absolute; top: 14px; font-size: clamp(1.2rem, 2.6vh, 1.8rem); }
+.lado.azul .nome-jogador { left: 4%; } .lado.vermelho .nome-jogador { right: 4%; }
+.opcoes { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; width: 100%; max-width: 600px; margin: 0 auto; }
+.opcao { min-height: clamp(72px, 11vh, 110px); padding: 8px 12px; font: 600 clamp(1.05rem, 2vw, 1.6rem)/1.15 var(--font-comic-body); color: var(--text-primary); background: #fff; border: var(--border-comic); border-radius: 16px; cursor: pointer; text-align: center; box-shadow: 0 6px 0 0 var(--contorno); transition: transform .06s, box-shadow .06s; }
+.opcao:active { transform: translateY(5px); box-shadow: 0 1px 0 0 var(--contorno); }
+.opcao.errada { background: #cbd5e1; color: #94a3b8; text-decoration: line-through; pointer-events: none; animation: tremer .35s; }
+.opcao.certa { background: var(--comic-green); color: #fff; outline: 5px solid #fff; pointer-events: none; animation: pulo .4s; }
+.lado.bloqueado .opcoes { opacity: .55; pointer-events: none; }
+.cadeado { display: none; text-align: center; color: #fff; font-family: var(--font-comic-title); font-style: italic; font-size: 1.5rem; text-shadow: 2px 2px 0 var(--contorno); }
+.lado.bloqueado .cadeado { display: block; }
+.pergunta-box { position: absolute; left: 50%; top: 0; transform: translate(-50%, -38%); width: min(58%, 800px); z-index: 6; text-align: center; padding: 16px 22px 18px; }
+.pergunta-box .tag { display: inline-block; margin-bottom: 8px; }
+.pergunta-box .texto { font: 600 clamp(1.25rem, 2.5vw, 2rem)/1.25 var(--font-comic-body); min-height: 2.5em; display: grid; place-items: center; }
+.pergunta-box .texto.conta { font: 400 clamp(3rem, 7vw, 5.5rem)/1 var(--font-comic-title); letter-spacing: .05em; color: var(--comic-blue-dark); min-height: 1.2em; }
+.pergunta-box .msg { min-height: 1.6em; font-weight: 800; font-family: var(--font-ui); color: var(--text-primary); }
+.barra-tempo { height: 14px; border: 3px solid var(--contorno); border-radius: 999px; background: #e2e8f0; overflow: hidden; margin-top: 8px; }
+.barra-tempo i { display: block; height: 100%; width: 100%; background: var(--comic-green); transition: width .1s linear; }
+.barra-tempo i.pouco { background: var(--comic-red); }
+
+/* Selo indicador de Conta ou Pergunta */
+.selo-tipo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--comic-yellow);
+  color: var(--text-primary);
+  border: var(--border-comic);
+  border-radius: 999px;
+  padding: 4px 20px;
+  font-family: var(--font-comic-title);
+  font-size: 1.4rem;
+  letter-spacing: .05em;
+  box-shadow: var(--shadow-comic-sm);
+  white-space: nowrap;
+  z-index: 10;
+}
+
+/* Caso seja uma Conta, podemos mudar a cor da borda ou do fundo */
+.selo-tipo.conta {
+  background: var(--comic-cyan);
+  color: var(--text-primary);
+}
+
+/* Caso seja uma Pergunta, mantemos o amarelo */
+.selo-tipo.pergunta {
+  background: var(--comic-yellow);
+}
+@media (max-width: 760px) { .pergunta-box { width: 94%; } .opcoes { gap: 8px; } }

@@ -1,0 +1,31 @@
+main.forca-main { max-width: 1480px; margin: 0 auto; padding: 24px 16px 40px; display: grid; grid-template-columns: minmax(280px, 380px) 1fr; gap: 28px; align-items: start; }
+@media (max-width: 860px) { main.forca-main { grid-template-columns: 1fr; } .boneco-card svg { max-height: 240px; } }
+.boneco-card svg { width: 100%; height: auto; display: block; }
+.palco  { fill: var(--comic-blue); stroke: var(--contorno); stroke-width: 5; stroke-linejoin: round; }
+.contorno { stroke: var(--contorno); stroke-width: 5; stroke-linejoin: round; stroke-linecap: round; }
+.borda { fill: none; stroke: var(--contorno); stroke-width: 26; stroke-linecap: round; }
+.braco { fill: none; stroke: var(--comic-blue); stroke-width: 16; stroke-linecap: round; }
+.perna { fill: none; stroke: var(--comic-green); stroke-width: 16; stroke-linecap: round; }
+.pele   { fill: var(--comic-yellow); }
+.camisa { fill: var(--comic-red); }
+.sapato { fill: var(--comic-orange); }
+.olho   { fill: var(--contorno); }
+.tracos { fill: none; stroke: var(--contorno); stroke-width: 5; stroke-linecap: round; }
+.parte { opacity: 0; transform-box: fill-box; transform-origin: center; }
+.parte.visivel { opacity: 1; animation: surge .45s ease-out; }
+@keyframes surge { 0% { transform: scale(.2); opacity: 0; } 70% { transform: scale(1.15); opacity: 1; } 100% { transform: scale(1); } }
+#boneco.feliz { animation: pulo .5s; }
+.selo-pill.grande { font-size: 1rem; padding: 6px 16px; }
+.forca-main .caixa-dica { font-size: clamp(1.1rem, 2.4vw, 1.5rem); font-weight: 600; margin-bottom: 8px; min-height: 64px; }
+.palavra { --tam: 60px; --fonte: 2.8rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 30px; padding: 22px 0 26px; }
+.grupo { display: flex; gap: 6px; max-width: 100%; }
+.slot { width: var(--tam); min-width: 22px; height: calc(var(--tam) * 1.25); flex-shrink: 1; display: grid; place-items: center; font-family: var(--font-comic-title); font-size: var(--fonte); color: var(--text-primary); background: #eef2f7; border: var(--border-comic); border-radius: 12px; box-shadow: var(--shadow-comic-sm); }
+.slot.aberta { background: #fff; animation: pulo .3s; }
+.slot.perdida { background: #ffe1e1; color: var(--comic-red-dark); }
+.slot.ganhou { background: #d9f5df; }
+.letras { display: grid; grid-template-columns: repeat(auto-fill, minmax(62px, 1fr)); gap: 10px; padding-bottom: 6px; }
+.letra { min-height: 62px; font-family: var(--font-comic-title); font-size: 1.9rem; color: var(--text-primary); background: #fff; border: var(--border-comic); border-radius: 14px; cursor: pointer; box-shadow: 0 5px 0 0 var(--contorno); transition: transform .06s, box-shadow .06s; }
+.letra:active { transform: translateY(4px); box-shadow: 0 1px 0 0 var(--contorno); }
+.letra.certa  { background: var(--comic-green); color: #fff; pointer-events: none; }
+.letra.errada { background: #cbd5e1; color: #94a3b8; pointer-events: none; text-decoration: line-through; }
+.letras.travado .letra { pointer-events: none; }

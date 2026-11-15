@@ -1,0 +1,123 @@
+main.calc-main { 
+    max-width: 1180px; 
+    margin: 0 auto; 
+    padding: 24px 16px 40px; 
+    display: grid; 
+    grid-template-columns: minmax(320px, 440px) 1fr; 
+    gap: 28px; 
+    align-items: start; 
+}
+@media (max-width: 860px) { 
+    main.calc-main { 
+        grid-template-columns: 1fr; 
+    } 
+    .conta-card { 
+        order: 1; 
+    } 
+    .calc-card { 
+        order: 2; 
+    } 
+}
+.calc-card { 
+    background: var(--comic-blue); 
+    padding: 18px; 
+    display: grid; 
+    gap: 16px; 
+}
+.tela { 
+    position: relative; 
+    overflow: hidden; 
+    background: #d9f3ff; 
+    border: var(--border-comic); 
+    border-radius: 14px; 
+    box-shadow: inset 0 4px 0 rgba(16, 28, 44, .15); 
+    min-height: 92px; 
+    padding: 10px 18px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-end; 
+}
+.tela .visor { 
+    position: relative; 
+    font-family: var(--font-ui); 
+    font-weight: 800; 
+    font-size: 3.2rem; 
+    color: var(--text-primary); 
+}
+.tela .trinca { 
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    width: 48%; 
+    height: 100%; 
+    fill: none; 
+    stroke: var(--contorno); 
+    stroke-width: 1.6; 
+    opacity: .55; 
+    pointer-events: none; 
+}
+.tela.aviso { 
+    animation: tremer .35s; 
+}
+.teclas { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 12px; 
+    padding-bottom: 6px; 
+}
+.tecla { 
+    min-height: 72px; 
+    font-family: var(--font-ui); 
+    font-size: 2.2rem; 
+    color: var(--text-primary); 
+    background: #fff; 
+    border: var(--border-comic); 
+    border-radius: 14px; 
+    cursor: pointer; 
+    box-shadow: 0 5px 0 0 var(--contorno); 
+    transition: transform .06s, box-shadow .06s; 
+}
+.tecla:active { 
+    transform: translateY(4px); 
+    box-shadow: 0 1px 0 0 var(--contorno); 
+}
+.tecla.sinal  { 
+    background: var(--comic-yellow); 
+}
+.tecla.igual  { 
+    background: var(--comic-green); 
+    color: #fff; 
+}
+.tecla.apagar { 
+    background: var(--comic-red); 
+    color: #fff; 
+}
+.tecla.quebrada { 
+    background-color: #94a3b8; 
+    color: #5b6b80; 
+    pointer-events: none; 
+    transform: rotate(-5deg); 
+    box-shadow: 0 3px 0 0 var(--contorno); 
+    background-image: linear-gradient(135deg, transparent 46%, var(--contorno) 47%, var(--contorno) 53%, transparent 54%); 
+}
+.teclas.travado .tecla { 
+    pointer-events: none; 
+}
+.caixa-dica { 
+    font-size: clamp(1.2rem, 2.6vw, 1.7rem); 
+    font-weight: 600; 
+    margin-bottom: 26px; 
+}
+.conta { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 12px; 
+    padding: 18px 0 26px; 
+}
+.parteCalculadora { min-width: 82px; height: clamp(86px, 14vw, 128px); padding: 0 14px; display: grid; place-items: center; font-family: var(--font-comic-title); font-size: clamp(3rem, 7vw, 5rem); color: var(--text-primary); background: #fff; border: var(--border-comic); border-radius: 16px; box-shadow: var(--shadow-comic); }
+.parteCalculadora.sinal { background: var(--comic-yellow); min-width: 70px; }
+.parteCalculadora.igual { background: none; border-color: transparent; box-shadow: none; color: var(--comic-blue); min-width: 50px; padding: 0 4px; }
+.parteCalculadora.lacuna { background: #fff7cc; border-style: dashed; border-color: var(--comic-blue); color: var(--comic-blue); min-width: 110px; }
+.parteCalculadora.certo  { background: var(--comic-green); border-style: solid; border-color: var(--contorno); color: #fff; animation: pulo .4s; }
+.parteCalculadora.errado { background: var(--comic-red);   border-style: solid; border-color: var(--contorno); color: #fff; animation: tremer .35s;  }

@@ -1,0 +1,143 @@
+export const HISTORIAS = {
+  facil: [
+    { titulo: 'Os Três Porquinhos', icone: '🐷', imagem: 'assets/historias/os-tres-porquinhos.png', cenas: [
+      { icone: '🏗️', texto: 'Três porquinhos construíram casas: uma de palha, uma de madeira e uma de tijolos.'},
+      { icone: '🐺', texto: 'O lobo mau soprou e derrubou a casa de palha e a de madeira.' },
+      { icone: '🧱', texto: 'Os porquinhos correram para a casa de tijolos, que o lobo não conseguiu derrubar.' },
+    ]},
+    { titulo: 'Chapeuzinho Vermelho', icone: '👧', imagem: 'assets/historias/chapeuzinho-vermelho.png', cenas: [
+      { icone: '🧺', texto: 'Chapeuzinho Vermelho foi levar doces para a vovó.' },
+      { icone: '🐺', texto: 'No caminho, o lobo chegou antes e se escondeu na cama da vovó.' },
+      { icone: '🪓', texto: 'Um caçador apareceu e salvou a vovó e a menina.' },
+    ]},
+    { titulo: 'A Lebre e a Tartaruga', icone: '🐢', imagem: 'assets/historias/a-lebre-e-a-tartaruga.png', cenas: [
+      { icone: '🏁', texto: 'A lebre riu da tartaruga e a desafiou para uma corrida.' },
+      { icone: '😴', texto: 'A lebre disparou na frente e parou para tirar uma soneca.' },
+      { icone: '🏆', texto: 'A tartaruga, devagar e sempre, passou por ela e chegou primeiro.' },
+    ]},
+    { titulo: 'O Patinho Feio', icone: '🦢', imagem: 'assets/historias/o-patinho-feio.png', cenas: [
+      { icone: '🐥', texto: 'Um patinho nasceu diferente dos irmãos e todos riam dele.' },
+      { icone: '❄️', texto: 'Sozinho, ele enfrentou um longo e frio inverno.' },
+      { icone: '🦢', texto: 'Na primavera, viu seu reflexo no lago: tinha virado um lindo cisne.' },
+    ]},
+    { titulo: 'A Cigarra e a Formiga', icone: '🐜', imagem: 'assets/historias/a-cigarra-e-a-formiga.png', cenas: [
+      { icone: '🎻', texto: 'No verão, a cigarra cantava enquanto a formiga trabalhava.' },
+      { icone: '🥶', texto: 'Quando o inverno chegou, a cigarra ficou com frio e com fome.' },
+      { icone: '🐜', texto: 'A formiga a acolheu, e a cigarra aprendeu o valor do trabalho.' },
+    ]},
+  ],
+
+  medio: [
+    { titulo: 'Cinderela', icone: '👠', imagem: 'assets/historias/cinderela.png', cenas: [
+      { icone: '🧹', texto: 'Cinderela vivia trabalhando na casa da madrasta e das irmãs.' },
+      { icone: '🪄', texto: 'A fada madrinha lhe deu um vestido e uma carruagem para ir ao baile.' },
+      { icone: '👠', texto: 'Ela dançou com o príncipe, mas fugiu à meia-noite e perdeu um sapatinho.' },
+      { icone: '🔎', texto: 'O príncipe percorreu o reino procurando a dona do sapatinho.' },
+      { icone: '💍', texto: 'O sapatinho serviu em Cinderela, e os dois se casaram.' },
+    ]},
+    { titulo: 'Branca de Neve', icone: '🍎', imagem: 'assets/historias/branca-de-neve.png', cenas: [
+      { icone: '👑', texto: 'A rainha malvada teve inveja da beleza de Branca de Neve.' },
+      { icone: '🌲', texto: 'Branca de Neve fugiu para a floresta e foi morar com os sete anões.' },
+      { icone: '🍎', texto: 'A rainha, disfarçada de velhinha, ofereceu a ela uma maçã envenenada.' },
+      { icone: '😴', texto: 'Branca de Neve mordeu a maçã e caiu num sono profundo.' },
+      { icone: '✨', texto: 'O beijo do príncipe quebrou o feitiço e ela acordou.' },
+    ]},
+    { titulo: 'O Príncipe Sapo', icone: '🐸', imagem: 'assets/historias/o-principe-sapo.png', cenas: [
+      { icone: '⚽', texto: 'A princesa deixou cair sua bola de ouro no fundo de um poço.' },
+      { icone: '🐸', texto: 'Um sapo trouxe a bola de volta em troca de uma amizade.' },
+      { icone: '💋', texto: 'A princesa deu um beijo no sapo.' },
+      { icone: '🤴', texto: 'O sapo virou um príncipe, e os dois viveram felizes.' },
+    ]},
+    { titulo: 'João e o Pé de Feijão', icone: '🌱', imagem: 'assets/historias/joao-e-o-pe-de-feijao.png', cenas: [
+      { icone: '🐄', texto: 'João trocou a vaca da família por alguns feijões mágicos.' },
+      { icone: '🫘', texto: 'A mãe ficou brava e jogou os feijões pela janela.' },
+      { icone: '🌱', texto: 'No dia seguinte, um pé de feijão gigante crescia até as nuvens.' },
+      { icone: '🐔', texto: 'João subiu, encontrou um gigante e pegou uma galinha de ovos de ouro.' },
+      { icone: '🪓', texto: 'O gigante o perseguiu, mas João cortou o pé de feijão e escapou.' },
+    ]},
+    { titulo: 'A Bela Adormecida', icone: '😴', imagem: 'assets/historias/a-bela-adormecida.png', cenas: [
+      { icone: '🔮', texto: 'Uma fada malvada lançou um feitiço sobre a princesa recém-nascida.' },
+      { icone: '🧵', texto: 'Aos 16 anos, a princesa espetou o dedo numa roca e caiu num sono profundo.' },
+      { icone: '🌿', texto: 'O castelo inteiro dormiu, coberto por espinheiros.' },
+      { icone: '🤴', texto: 'Um príncipe atravessou os espinhos e despertou a princesa.' },
+    ]},
+  ],
+
+  dificil: [
+    { titulo: 'Pinóquio', icone: '🪵', imagem: 'assets/historias/pinoquio.png', cenas: [
+      { icone: '🪵', texto: 'O velho Gepeto esculpiu um boneco de madeira e o chamou de Pinóquio.' },
+      { icone: '🧚', texto: 'A Fada Azul deu vida a Pinóquio e pediu que ele fosse bom e honesto.' },
+      { icone: '🤥', texto: 'Quando Pinóquio mentiu, o nariz dele começou a crescer.' },
+      { icone: '🎠', texto: 'Seguindo maus amigos, Pinóquio foi parar no País dos Brinquedos.' },
+      { icone: '🐋', texto: 'Pinóquio soube que Gepeto fora engolido por uma baleia e foi salvá-lo.' },
+      { icone: '👦', texto: 'Por ser corajoso e generoso, Pinóquio virou um menino de verdade.' },
+    ]},
+    { titulo: 'Rapunzel', icone: '💇‍♀️', imagem: 'assets/historias/rapunzel.png', cenas: [
+      { icone: '🧙‍♀️', texto: 'Uma bruxa levou a bebê Rapunzel para criá-la como filha.' },
+      { icone: '🏰', texto: 'Quando cresceu, Rapunzel foi trancada numa torre sem portas.' },
+      { icone: '💇‍♀️', texto: 'Para subir, a bruxa pedia que Rapunzel jogasse suas longas tranças.' },
+      { icone: '🤴', texto: 'Um príncipe ouviu Rapunzel cantar e subiu pelas tranças dela.' },
+      { icone: '✂️', texto: 'A bruxa descobriu tudo e cortou as tranças de Rapunzel.' },
+      { icone: '💞', texto: 'No fim, Rapunzel e o príncipe se reencontraram e foram felizes.' },
+    ]},
+    { titulo: 'Alice no País das Maravilhas', icone: '🐇', imagem: 'assets/historias/alice-no-pais-das-maravilhas.png', cenas: [
+      { icone: '🐇', texto: 'Alice viu um coelho de colete olhando o relógio e correu atrás dele.' },
+      { icone: '🕳️', texto: 'Ela caiu numa toca bem funda e foi parar num mundo estranho.' },
+      { icone: '🍄', texto: 'Alice bebeu um líquido e ficou pequenininha; depois comeu um bolinho e ficou enorme.' },
+      { icone: '🎩', texto: 'Numa mesa de chá, ela conheceu o Chapeleiro Maluco e a Lebre de Março.' },
+      { icone: '♥️', texto: 'Alice foi levada ao julgamento da Rainha de Copas, que dava ordens aos gritos.' },
+      { icone: '💤', texto: 'Alice acordou debaixo de uma árvore e percebeu que tudo fora um sonho.' },
+    ]},
+    { titulo: 'O Gato de Botas', icone: '🐱', imagem: 'assets/historias/o-gato-de-botas.png', cenas: [
+      { icone: '🌾', texto: 'Um moleiro morreu e deixou para o filho mais novo apenas um gato.' },
+      { icone: '🥾', texto: 'O gato pediu um par de botas e um saco e prometeu fazer a fortuna do rapaz.' },
+      { icone: '🐇', texto: 'Ele caçava coelhos e os levava ao rei, dizendo que eram presentes do Marquês de Carabás.' },
+      { icone: '🌊', texto: 'O gato fez o dono se banhar no rio e pediu socorro ao rei, que lhe deu roupas finas.' },
+      { icone: '🏰', texto: 'O gato enganou o ogro dono de um castelo e o fez virar um ratinho.' },
+      { icone: '👑', texto: 'O rapaz ficou com o castelo e se casou com a princesa.' },
+    ]},
+  ],
+
+  desafio: [
+    { titulo: 'Aladim e a Lâmpada Maravilhosa', icone: '🪔', imagem: 'assets/historias/aladim-e-a-lampada-maravilhosa.png', cenas: [
+      { icone: '🧙', texto: 'Um feiticeiro enganou o jovem Aladim e o levou até uma caverna misteriosa.' },
+      { icone: '🪔', texto: 'Dentro da caverna, Aladim encontrou uma velha lâmpada de óleo.' },
+      { icone: '🔒', texto: 'Como Aladim não quis entregar a lâmpada antes de sair, o feiticeiro o trancou lá dentro.' },
+      { icone: '🧞', texto: 'Ao esfregar a lâmpada, Aladim fez surgir um gênio pronto a realizar seus desejos.' },
+      { icone: '👸', texto: 'Com a ajuda do gênio, Aladim ficou rico e conquistou a princesa.' },
+      { icone: '🎭', texto: 'O feiticeiro voltou disfarçado e trocou a lâmpada velha por lâmpadas novas.' },
+      { icone: '🏯', texto: 'Com a lâmpada, o feiticeiro levou o palácio e a princesa para um lugar distante.' },
+      { icone: '⚔️', texto: 'Aladim recuperou a lâmpada, derrotou o feiticeiro e trouxe o palácio de volta.' },
+    ]},
+    { titulo: 'Ali Babá e os Quarenta Ladrões', icone: '🗝️', imagem: 'assets/historias/ali-baba-e-os-quarenta-ladroes.png', cenas: [
+      { icone: '🌳', texto: 'O lenhador Ali Babá viu ladrões entrarem numa caverna dizendo: "Abre-te, Sésamo!"' },
+      { icone: '🚪', texto: 'Depois que eles saíram, Ali Babá repetiu as palavras e a caverna se abriu.' },
+      { icone: '💰', texto: 'Lá dentro havia um tesouro enorme, e ele levou alguns sacos de ouro para casa.' },
+      { icone: '👥', texto: 'O irmão dele, Cassim, descobriu o segredo e foi sozinho à caverna.' },
+      { icone: '😨', texto: 'Cassim esqueceu a senha, ficou preso e foi descoberto pelos ladrões.' },
+      { icone: '🏺', texto: 'Os ladrões tentaram invadir a casa de Ali Babá escondidos dentro de jarros de óleo.' },
+      { icone: '💃', texto: 'A esperta Morgana percebeu o plano e derrotou os ladrões.' },
+      { icone: '🎉', texto: 'Ali Babá e a família ficaram em segurança, e Morgana foi recompensada.' },
+    ]},
+    { titulo: 'Robin Hood', icone: '🏹', imagem: 'assets/historias/robin-hood.png', cenas: [
+      { icone: '👑', texto: 'O rei Ricardo viajou para longe, e o malvado príncipe João passou a mandar no reino.' },
+      { icone: '💸', texto: 'O príncipe João e o xerife de Nottingham cobravam impostos altíssimos do povo.' },
+      { icone: '🌲', texto: 'Robin Hood foi viver escondido na floresta de Sherwood com seus amigos.' },
+      { icone: '🤝', texto: 'Robin Hood tirava dos ricos e dava aos pobres.' },
+      { icone: '🏹', texto: 'O xerife organizou um torneio de arco e flecha para capturar Robin Hood.' },
+      { icone: '🎯', texto: 'Disfarçado, Robin Hood participou do torneio e acertou o alvo em cheio.' },
+      { icone: '🏃', texto: 'Ele foi descoberto, mas seus amigos o ajudaram a escapar.' },
+      { icone: '⚖️', texto: 'O rei Ricardo voltou, e a justiça foi restaurada no reino.' },
+    ]},
+    { titulo: 'O Mágico de Oz', icone: '🌪️', imagem: 'assets/historias/o-magico-de-oz.png', cenas: [
+      { icone: '🌪️', texto: 'Um furacão levou Dorothy e seu cachorro Totó para uma terra mágica.' },
+      { icone: '👠', texto: 'A casa de Dorothy caiu sobre uma bruxa má, e a menina ganhou os sapatos dela.' },
+      { icone: '🛤️', texto: 'Para voltar para casa, Dorothy seguiu a estrada de tijolos amarelos.' },
+      { icone: '🦁', texto: 'No caminho, ela conheceu o Espantalho, o Homem de Lata e o Leão.' },
+      { icone: '🧙‍♂️', texto: 'Na Cidade das Esmeraldas, o Mágico de Oz pediu que derrotassem a Bruxa Má do Oeste.' },
+      { icone: '💧', texto: 'Dorothy jogou água na bruxa, e ela derreteu.' },
+      { icone: '🎪', texto: 'Eles descobriram que o Mágico era só um homem comum, sem poderes.' },
+      { icone: '🏡', texto: 'Dorothy bateu os sapatos um no outro e voltou para casa.' },
+    ]},
+  ],
+};
